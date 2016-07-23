@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:foreground="?selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rlData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground">
+
+            <views.RoundedImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/food" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="32dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/ivMenu"
+                android:layout_toRightOf="@id/ivMenu">
+
+                <TextView
+                    android:id="@+id/tvMealName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Meal"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMealName"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4.0"
+                    android:stepSize="1.0" />
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMealName"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_toRightOf="@+id/ratingBar"
+                    android:text="4.0/5.0"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tvMealName"
+                    android:layout_centerVertical="true"
+                    android:text="53 Sold"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/ivDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMealName"
+                    android:layout_toLeftOf="@id/tvSold"
+                    android:src="@drawable/ic_shopping_cart_small" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRate">
+
+                    <ImageView
+
+                        android:id="@+id/ivCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_restaurant_menu_gray" />
+
+                    <TextView
+                        android:id="@+id/tvCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/ivCuisine"
+                        android:text="Italian food"
+                        android:textSize="12dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_reorder" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rlActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlData"
+            android:foreground="?selectableItemBackground"
+            android:visibility="gone"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?listPreferredItemHeight">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:text="Delete" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Unpublish" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/chrome_yellow"
+                    android:text="Edit" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
