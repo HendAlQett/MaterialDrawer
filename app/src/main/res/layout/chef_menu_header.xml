@@ -1,0 +1,116 @@
+<com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <views.RoundedImageView
+                android:id="@+id/ivChef"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/food" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/ivChef"
+                android:layout_toRightOf="@id/ivChef">
+
+                <TextView
+                    android:id="@+id/tvChefName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Smith"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvChefName"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4.0"
+                    android:stepSize="1.0" />
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvChefName"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_toRightOf="@+id/ratingBar"
+                    android:text="4.0/5.0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tvChefName"
+                    android:text="700 m"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvChefName"
+                    android:layout_toLeftOf="@id/tvDistance"
+                    android:src="@drawable/ic_place_small" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRate">
+
+                    <ImageView
+
+                        android:id="@+id/ivCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_restaurant_menu_gray" />
+
+                    <TextView
+                        android:id="@+id/tvCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/ivCuisine"
+                        android:text="@string/tvCuisine"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivChef"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvChefDescription"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
